@@ -1,0 +1,19 @@
+{
+  "name": "ts-react-node-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "UNLICENSED",
+  "private": true,
+  "author": "Gabriel Théron <gabe90atwork@gmail.com>",
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "w": "yarn workspace"
+  },
+  "devDependencies": {
+    "prettier": "2.3.2"
+  }
+}

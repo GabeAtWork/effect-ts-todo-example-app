@@ -1,0 +1,25 @@
+{
+    // Use IntelliSense to learn about possible Node.js debug attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "Attach backend",
+            "type": "node",
+            "request": "attach",
+            "port": 1707,
+            "address": "localhost",
+            "restart": true,
+            "sourceMaps": true,
+            "outFiles": ["${workspaceRoot}/packages/backend/src"],
+            "skipFiles": [
+                "${workspaceFolder}/packages/backend/app/node_modules/**/*.js"
+            ],
+            "localRoot": "${workspaceRoot}/packages/backend/src",
+            "remoteRoot": "${workspaceRoot}/packages/backend/src",
+            "smartStep": true,
+            "trace": true
+        },
+    ]
+}
