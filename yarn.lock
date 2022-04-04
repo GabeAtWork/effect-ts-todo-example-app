@@ -1243,6 +1243,21 @@
   resolved "https://registry.yarnpkg.com/@effect-ts/jest/-/jest-0.33.0.tgz#4c6c5751e806771bf12a637a2f8f1ab9d2aee1ac"
   integrity sha512-YAQMFjI7P8eDO2CtH0K5G1MEMBxInHLAj/Z7uY9qGqXKyDyK6M4rheg3nbZTopU5Bvj+3LUKYdxfvg5RKVnqvg==
 
+"@effect-ts/query@^0.26.0":
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/@effect-ts/query/-/query-0.26.0.tgz#2a54c27a962047112f19c5eef8ee36a6a1249553"
+  integrity sha512-uBDtxeBGipPr0yyyyuhKF+a1U2T/MNAB5tHKID5tAVM5O+/PgPqJwJG4XJCGdXm3mAotV/IenZFO4UxRHRO+Mg==
+
+"@effect-ts/react@^0.3.1":
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/@effect-ts/react/-/react-0.3.1.tgz#8ee02d0a4a9bf79102b30a0099bf85d6929ec199"
+  integrity sha512-VCsdjDU9Wx5qoRJoIqeha+MOwSA6xbYOe4nn4IElc5aCw5bdtktiGyAaJ5+4q1zRi2/07LK7NDSQ/BGd5NWBOA==
+
+"@effect-ts/schema@^0.17.2":
+  version "0.17.2"
+  resolved "https://registry.yarnpkg.com/@effect-ts/schema/-/schema-0.17.2.tgz#81a8b932d8117b95dce11f39765128febb959880"
+  integrity sha512-LvuCq+h3N/1PfimXO6Aj48WAbPOWX6DjchMRoz79lyJ+ojDLj/ft7trAsHIsgTwVovfot59PH2IY4+YA7pOwxg==
+
 "@effect-ts/system@^0.49.1":
   version "0.49.1"
   resolved "https://registry.yarnpkg.com/@effect-ts/system/-/system-0.49.1.tgz#51f731bf4c71477209cf22db54b968c839183b91"
@@ -5538,6 +5553,13 @@ extsprintf@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/extsprintf/-/extsprintf-1.4.0.tgz#e2689f8f356fad62cca65a3a91c5df5f9551692f"
   integrity sha1-4mifjzVvrWLMplo6kcXfX5VRaS8=
+
+fast-check@^2.23.2:
+  version "2.23.2"
+  resolved "https://registry.yarnpkg.com/fast-check/-/fast-check-2.23.2.tgz#375c01827a9d58916c8a0ad463d1f17fe8e6ae4b"
+  integrity sha512-ECYuSlp6NLpvOj8eScKsqoz1ihtCpSDuEC2ofdGvgsEu1obHYEGqreJ/iPzkJFy73yoU0kCFea7PHUQDNM0VNg==
+  dependencies:
+    pure-rand "^5.0.1"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -10070,6 +10092,11 @@ pupa@^2.0.1:
   integrity sha512-l1jNAspIBSFqbT+y+5FosojNpVpF94nlI+wDUpqP9enwOTfHx9f0gh5nB96vl+6yTpsJsypeNrwfzPrKuHB41A==
   dependencies:
     escape-goat "^2.0.0"
+
+pure-rand@^5.0.1:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/pure-rand/-/pure-rand-5.0.1.tgz#97a287b4b4960b2a3448c0932bf28f2405cac51d"
+  integrity sha512-ksWccjmXOHU2gJBnH0cK1lSYdvSZ0zLoCMSz/nTGh6hDvCSgcRxDyIcOBD6KNxFz3xhMPm/T267Tbe2JRymKEQ==
 
 q@^1.1.2:
   version "1.5.1"
