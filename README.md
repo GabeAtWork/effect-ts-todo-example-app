@@ -21,6 +21,6 @@ Main tools:
 What needs to be implemented for the app to be complete
 
 - [x] Basic backend (1 repo, escape hatch controllers)
-- [ ] Basic frontend
+- [x] Basic frontend
 - [ ] Backend: use Effect-TS/express
 - [ ] Advanced backend: sharing a transaction between repositories
