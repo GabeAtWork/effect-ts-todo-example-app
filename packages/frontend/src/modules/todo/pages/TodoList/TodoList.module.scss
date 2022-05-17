@@ -1,0 +1,49 @@
+.pageWrapper {
+  display: block;
+  padding-top: 3rem;
+}
+
+.page {
+  width: 40vw;
+  margin: auto;
+}
+
+.titleLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pageTitle {
+  font-size: 46px;
+  font-weight: 100;
+  border-bottom: 1px solid;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid lightgray;*/
+}
+
+.listItem {
+  border: 1px solid black;
+  padding: 1rem;
+  margin: 0.2rem 0;
+}
+
+.listItemTitleLine {
+  display: flex;
+  align-items: center;
+}
+
+.listItemTitle {
+  font-size: 18px;
+  font-weight: bold;
+  padding-left: 0.5rem;
+}
+
+.listItemDescription {
+  color: rgb(100, 100, 100);
+  padding-top: 0.5rem;
+}
