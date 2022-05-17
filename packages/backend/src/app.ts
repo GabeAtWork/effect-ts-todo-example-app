@@ -3,11 +3,9 @@ import logger from 'morgan';
 import * as path from 'path';
 import cors from 'cors';
 import { bootstrapServices } from './services';
-
 import { errorHandler, errorNotFoundHandler } from './middlewares/errorHandler';
+import { bootstrapRoutes } from './routes';
 
-// Routes
-import { index } from './routes/index';
 // Create Express server
 export const app = express();
 
@@ -37,12 +35,9 @@ const pool = createPool(
 );
 
 app.use(express.static(path.join(__dirname, '../public')));
-app.use((req, res, next) => {
-  const services = bootstrapServices({ pool });
-  (req as any).context = { services };
-  next();
-});
-app.use('/', index);
+
+const services = bootstrapServices({ pool });
+bootstrapRoutes(app, services);
 
 app.use(errorNotFoundHandler);
 app.use(errorHandler);

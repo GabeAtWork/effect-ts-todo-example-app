@@ -4,3 +4,4 @@ export type {
   TodoNotFoundError,
 } from './infrastructure';
 export { LiveTodoRepository, TodoRepository } from './infrastructure';
+export { buildTodoController } from './app';
