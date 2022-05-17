@@ -1,31 +1,27 @@
-import {
-  Router,
-  RequestHandler,
-  Request,
-  Response,
-  NextFunction,
-} from 'express';
-import * as controller from '../controllers/index';
-import { RequestWithContext } from '../types';
+import { Application, Request, Response, Router } from 'express';
+import { buildTodoController } from '../modules/todo';
+import { MainEnv } from '../services';
 
-export const index = Router();
-
-// TODO change this to use effects maybe?
-type ControllerFn = (
-  req: RequestWithContext,
+/**
+ * GET /
+ * Home page.
+ */
+export const indexRoute = async (
+  req: Request,
   res: Response,
-  next: NextFunction,
-) => void;
+): Promise<void> => {
+  res.json({ hello: 'world' });
+};
 
-const assertRequestWithContext =
-  (controllerFn: ControllerFn): RequestHandler =>
-  (req: Request, res: Response, next: NextFunction) => {
-    if (!(req as any as { context: unknown }).context) {
-      throw new Error('Context was not provided');
-    }
+export function bootstrapRoutes(app: Application, services: MainEnv) {
+  const index = Router();
 
-    return controllerFn(req as any as RequestWithContext, res, next);
-  };
+  index.get('/api/', indexRoute);
 
-index.get('/api/', assertRequestWithContext(controller.index));
-index.get('/api/todos', assertRequestWithContext(controller.getTodos));
+  // TODO auto-bootstrap
+  const routes = [...buildTodoController(services)];
+
+  routes.forEach(({ path, method, handler }) => index[method](path, handler));
+
+  app.use('/', index);
+}
