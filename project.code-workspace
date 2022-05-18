@@ -1,0 +1,20 @@
+{
+  "settings": {
+    "jest.jestCommandLine": "yarn test",
+    "jest.disabledWorkspaceFolders": ["Root"]
+  },
+  "folders": [
+    {
+      "name": "Root",
+      "path": "."
+    },
+    {
+      "name": "backend",
+      "path": "packages/backend"
+    },
+    {
+      "name": "frontend",
+      "path": "packages/frontend"
+    }
+  ]
+}
